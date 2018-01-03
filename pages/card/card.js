@@ -1,6 +1,7 @@
 Page({
   data: {
     time: '?',
+    url: '',
     front: true,
   },
   tapCard: function (event) {
@@ -9,7 +10,8 @@ Page({
   onLoad: function (param) {
     // 页面初始化 param为页面跳转所带来的参数
     this.setData({
-      time: param.time
+      time: param.time,
+      url: param.url
     })
   }
 })

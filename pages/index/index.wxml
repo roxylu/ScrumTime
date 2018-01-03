@@ -1,9 +1,13 @@
 <view class="container">
   <view class="weui-grids">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
     <view wx:for="{{times}}">
-      <navigator class="weui-grid" url="../card/card?time={{item}}">
+      <navigator class="weui-grid" url="../card/card?time={{item}}&url={{userInfo.avatarUrl}}">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
         <text class="weui-grid__label">{{item}}</text>
       </navigator>
     </view>
+    </block>
   </view>
 </view>
