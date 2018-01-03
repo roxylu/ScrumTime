@@ -4,16 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../card/card'
-    })
+    times: ['0.5', '1', '2', '3', '5', '8', '10', '13', 'Coffee']
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
