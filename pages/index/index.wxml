@@ -1,7 +1,7 @@
 <view class="container">
   <view class="weui-grids">
-    <view class="weui-grid" wx:for="{{times}}">
-      <navigator url="../card/card?time={{item}}">
+    <view wx:for="{{times}}">
+      <navigator class="weui-grid" url="../card/card?time={{item}}">
         <text class="weui-grid__label">{{item}}</text>
       </navigator>
     </view>

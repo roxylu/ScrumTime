@@ -1,6 +1,6 @@
 <view class="container">
   <view id="card" class="card" data-hi="WeChat" bindtap="tapCard">
-    <view class="result" wx:if="{{front}}">你猜</view>
-    <view class="result" wx:else>{{time}}</view>
+    <text class="card__label" wx:if="{{front}}">你猜</text>
+    <text class="card__label" wx:else>{{time}}</text>
   </view>
 </view>
